@@ -3,7 +3,7 @@
 #
 # TODO before first push: set `owner` to the new GitHub org handle (e.g. oit-tn).
 owner: TunisianEngineersOrder # <-- replace with the new org handle
-repo: status
+repo: tunisianengineersorder.github.io
 
 # ---------------------------------------------------------------------------
 # Monitored endpoints (public-facing only — reachable from GitHub cloud runners)
@@ -89,4 +89,4 @@ status-website:
     - title: Status
       href: /
     - title: GitHub
-      href: https://github.com/TunisianEngineersOrder/status
+      href: https://github.com/TunisianEngineersOrder/tunisianengineersorder.github.io
