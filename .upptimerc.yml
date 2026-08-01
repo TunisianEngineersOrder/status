@@ -63,19 +63,9 @@ sites:
       - 200
       - 401 # registries answer 401 to unauthenticated GETs — that means UP
 
-  # ---- Edge / whole-site reachability (catches a full-site or link outage)
-  # TCP-ping runs via Globalping; confirms the FortiGate WAN is answering.
-  - name: Tunis Edge (FortiGate WAN)
-    url: 196.203.216.62:443
-    check: tcp-ping
-
-  - name: Paris Edge (FortiGate WAN)
-    url: 188.165.38.207:443
-    check: tcp-ping
-
-  - name: Berlin Edge (FortiGate WAN)
-    url: 51.38.117.16:443
-    check: tcp-ping
+  # NOTE: IP-level edge checks (TCP-ping to the FortiGate WANs) were removed —
+  # the firewalls drop unsolicited probes, so they always read "down". The app
+  # checks above already traverse each edge, so app-up implies edge-up.
 
 # ---------------------------------------------------------------------------
 # Incidents / notifications
