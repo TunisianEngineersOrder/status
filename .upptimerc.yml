@@ -79,7 +79,9 @@ assignees:
 # Status page
 # ---------------------------------------------------------------------------
 status-website:
-  cname: status.oit.org.tn # optional: point this DNS record at GitHub Pages later
+  # cname: status.oit.org.tn
+  # ^ re-enable ONLY after adding DNS: CNAME status.oit.org.tn -> tunisianengineersorder.github.io
+  #   (right now status.oit.org.tn resolves to OIT infra 197.25.139.14 via wildcard, which hijacks it)
   name: OIT Status
   introTitle: "**OIT** service status"
   introMessage: Live availability of OIT's public-facing services.
